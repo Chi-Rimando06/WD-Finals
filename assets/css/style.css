@@ -18,8 +18,12 @@ body {
     color: var(--white);
 }
 
-body.no-scroll {
+body.hide-scrollbar {
     overflow: hidden;
+}
+
+body.show-scrollbar {
+    overflow-y: auto;
 }
 
 body.scroll {
@@ -586,7 +590,7 @@ nav a:hover::after {
     }
 
 .detail-links {
-    position: absolute;
+    position: fixed;
     bottom: 1.5rem;
     left: 8%;
     display: flex;
@@ -599,11 +603,22 @@ nav a:hover::after {
     color: #cccccc;
     text-decoration: none;
     transition: color .3s;
+    position: relative;
 }
 
 .detail-links a:hover,
 .detail-links a.active {
     color: #ffffff;
+}
+
+.detail-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
 }
 
 .title {
@@ -789,10 +804,10 @@ nav a:hover::after {
 .footer {
     background-color: #750606;
     color: white;
-    padding: 1.2rem 4rem;
+    padding: 2rem 4rem 5.2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
 }

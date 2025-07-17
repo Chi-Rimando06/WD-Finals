@@ -22,36 +22,23 @@ document.getElementById("playScroll")?.addEventListener("click", () => {
 
 const video = document.querySelector(".bg-video");
 document.getElementById("musicToggle")?.addEventListener("click", () => {
-    if (video) {
-        video.muted = !video.muted;
-        logAction(video.muted ? "Video muted" : "Video unmuted");
-    }
+    if (!video) return;
+    video.muted = !video.muted;
+    logAction(video.muted ? "Video muted" : "Video unmuted");
 });
 
-document.querySelectorAll(".detail-links a").forEach((link) => {
+document.querySelectorAll(".detail-links a, .nav-bar nav a").forEach((link) => {
     link.addEventListener("click", (e) => {
         const name = e.target.textContent.trim();
         logAction(`Navigated to ${name}`);
     });
 });
 
-document.querySelectorAll(".nav-bar nav a").forEach((anchor) => {
-    anchor.addEventListener("click", (e) => {
-        const name = e.target.textContent.trim();
-        logAction(`Visited ${name} page`);
-    });
-});
-
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.body.classList.add("loaded");
-        const intro = document.getElementById("intro-flicker");
-        if (intro) intro.remove();
-
-        const introOverlay = document.querySelector(".intro-overlay");
-        if (introOverlay) {
-            introOverlay.style.display = "none";
-        }
+        document.getElementById("intro-flicker")?.remove();
+        document.querySelector(".intro-overlay")?.style.setProperty("display", "none");
     }, 4200);
 });
 
@@ -86,10 +73,37 @@ cards.forEach((card, index) => {
 
 updateCarousel();
 
-document.querySelectorAll('.c-play').forEach(button => {
-    button.addEventListener('click', (e) => {
+document.querySelectorAll(".c-play").forEach((button) => {
+    button.addEventListener("click", (e) => {
         e.stopPropagation();
-        const page = button.getAttribute('data-link');
+        const page = button.getAttribute("data-link");
         if (page) window.location.href = page;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".detail-links a");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href")?.includes(entry.target.id)
+                    );
+                });
+            }
+        });
+    }, { threshold: 0.6 });
+
+    sections.forEach((section) => observer.observe(section));
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            document.body.classList.remove("hide-scrollbar");
+            document.body.classList.add("show-scrollbar");
+        });
     });
 });
