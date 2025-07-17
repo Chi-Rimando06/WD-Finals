@@ -1,0 +1,395 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body.hide-scrollbar {
+    overflow: hidden;
+}
+
+body.show-scrollbar {
+    overflow-y: auto;
+}
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+    position: relative;
+    gap: 4rem;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.my-name {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-buttons .btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.red-glow {
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 0 10px #e50914;
+}
+
+.red-glow:hover {
+    box-shadow: 0 0 20px #e50914, 0 0 30px #e50914;
+}
+
+.glow-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.glow-outline:hover {
+    background: #fff;
+    color: #000;
+}
+
+.about-img {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+    will-change: transform, opacity;
+}
+
+.about-img::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(229, 9, 20, 0.2);
+    animation: rippleGlow 2.5s infinite ease-in-out;
+    z-index: 1;
+    filter: blur(10px);
+    will-change: transform, opacity;
+}
+
+.about-img::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: #e50914;
+    z-index: 0;
+    filter: blur(40px);
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rippleGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    70% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.education-section {
+    min-height: 100vh;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+}
+
+.edu-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.edu-flip-card {
+    background-color: transparent;
+    width: 360px;
+    height: 500px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.edu-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.edu-flip-card:hover .edu-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.edu-flip-front, .edu-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.edu-flip-front {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.edu-flip-front img {
+    max-width: 80%;
+    height: auto;
+}
+
+.edu-flip-back {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    transform: rotateY(180deg);
+    padding: 1.2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.4rem;
+}
+
+.edu-flip-back h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 0.4rem;
+}
+
+.edu-flip-back h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffb3b3;
+    margin-bottom: 0.2rem;
+}
+
+.edu-flip-back p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.edu-flip-back ul {
+    list-style-type: square;
+    padding-left: 1.1rem;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    margin-bottom: 0;
+    display: grid;
+    gap: 0.3rem;
+}
+
+.edu-flip-back ul li {
+    line-height: 1.2;
+    position: relative;
+    padding-left: 0.3rem;
+}
+
+.edu-flip-back ul li::marker {
+    color: #e50914;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-hero-content,
+    .about-hero-image {
+        max-width: 100%;
+    }
+
+    .about-hero-image {
+        margin-top: 30px;
+    }
+
+    .education-section {
+        padding: 30px 20px;
+    }
+
+    .education-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edu-flip-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .education-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .edu-flip-card {
+        width: 100%;
+        max-width: 250px;
+        height: 200px;
+    }
+
+    .edu-flip-card-front h3,
+    .edu-flip-card-back h3 {
+        font-size: 1rem;
+    }
+
+    .edu-flip-card-back p {
+        font-size: 0.85rem;
+    }
+
+    .about-hero,
+    .education-section {
+        padding: 20px 15px;
+    }
+}
+
+.location-section {
+    height: 100vh;
+    width: 100%;
+    background-color: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.location-title {
+    font-size: 2.5rem;
+    color: #e50914;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    animation: pulseText 2s infinite ease-in-out;
+    will-change: transform, opacity;
+}
+
+@keyframes pulseText {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.map-container {
+    width: 90%;
+    max-width: 1000px;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.5);
+}
+
+.ripple-bg {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(229,9,20,0.25) 20%, transparent 70%);
+    animation: rippleMap 4s infinite ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.map-container iframe {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rippleMap {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
