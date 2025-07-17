@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body class="no-scroll">
+    <div class="intro-overlay">
+      <div class="logo-mask-wrap">
+        <img src="./assets/img/logo_name.png" class="logo-fill" alt="Kaycee Logo">
+        <img src="./assets/img/logo_name.png" class="logo-white" alt="White Kaycee Logo">
+      </div>
+    </div>
+
+    <header class="nav-bar">
+      <img src="./assets/img/logo_name.png" class="logo-img" alt="Kaycee Logo">
+
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./pages/about_me/index.html">About Me</a>
+        <a href="./pages/skills/index.html">Skills</a>
+        <a href="./pages/involvements/index.html">Involvements</a>
+        <a href="./pages/proj/index.html">Projects</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="search-wrap">
+          <input type="text" class="search-bar" placeholder="Search..." />
+          <img src="./assets/img/search.png" class="search-img" alt="Search" />
+        </div>
+
+        <div class="notif-wrap">
+            <img src="./assets/img/bell.png" class="notif-img" alt="Notifications" />
+            <div class="notif-popup">
+              <ul id="notifList">
+                <li>No notifications yet.</li>
+              </ul>
+            </div>
+        </div>
+
+        <img src="./assets/img/chi.jpg" class="profile-icon" alt="Profile" />
+      </div>
+    </header>
+
+    <section class="hero">
+      <video class="bg-video" autoplay muted loop>
+        <source src="./assets/video/netflix_intro.MOV" type="video/mp4" />
+      </video>
+
+      <img src="./assets/img/sound.png" class="music-icon" id="musicToggle" alt="Toggle sound" />
+
+      <div class="video-overlay">
+        <div class="video-text">
+          <p class="label">KAYCEE ORIGINAL</p>
+          <h1 class="title">
+            <span>W</span>
+            <span>E</span>
+            <span>B</span>
+            <span>&nbsp;</span>
+            <span>D</span>
+            <span>E</span>
+            <span>S</span>
+            <span>I</span>
+            <span>G</span>
+            <span>N</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>T</span>
+            <span>O</span>
+            <span>R</span>
+            <span>I</span>
+            <span>E</span>
+            <span>S</span>
+          </h1>
+          <p class="desc">
+            Turning pixels into stories. Hi, I'm Chiriemie! An aspiring web
+            designer.
+          </p>
+
+          <div class="buttons">
+            <button id="playScroll" class="play">▶ Play</button>
+            <a href="./assets/files/CV - Rimando.pdf" download class="cv-btn">Download CV</a>
+          </div>
+
+          <ul class="meta">
+            <li><strong>Starring </strong>Chiriemie Keith G. Rimando</li>
+            <li><strong>Genre </strong>UI/UX · HTML/CSS · Storytelling</li>
+            <li><strong>This site is </strong>Innovative · Stylish · Meaningful</li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="detail-links">
+        <a href="#overview" class="active">Overview</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#contacts">Contacts</a>
+      </nav>
+    </section>
+
+    <section id="carouselSec" class="carousel-section">
+      <div class="carousel-track">
+        <div class="c-card active">
+          <div class="c-img" style="background-image: url('./assets/img/about_me.jpg')"></div>
+          <div class="c-floating-text">
+            <p>ABOUT ME</p>
+            <button class="c-play" data-link="./pages/about_me/index.html">
+              <img src="./assets/img/play.png" alt="Play" />
+            </button>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-img" style="background-image: url('./assets/img/skills.jpg')"></div>
+          <div class="c-floating-text">
+            <p>SKILLS</p>
+            <button class="c-play" data-link="./pages/skills/index.html">
+              <img src="./assets/img/play.png" alt="Play" />
+            </button>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-img" style="background-image: url('./assets/img/involvement.jpg')"></div>
+          <div class="c-floating-text">
+            <p>INVOLVEMENTS</p>
+            <button class="c-play" data-link="./pages/involvements/index.html">
+              <img src="./assets/img/play.png" alt="Play" />
+            </button>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-img" style="background-image: url('./assets/img/projects.jpg')"></div>
+          <div class="c-floating-text">
+            <p>PROJECTS</p>
+            <button class="c-play" data-link="./pages/proj/index.html">
+              <img src="./assets/img/play.png" alt="Play" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="highlights">
+      <div class="highlights-container">
+        <h2 class="highlight-title">HIGHLIGHTS</h2>
+        <div class="highlight-grid">
+          <video controls src="./assets/video/video1.MP4"></video>
+          <video controls src="./assets/video/video2.MP4"></video>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contacts" class="footer">
+      <div class="footer-left">
+        <p>All Rights Reserved © 2025</p>
+      </div>
+
+      <div class="footer-right">
+        <span class="contact-label">CONTACTS | </span>
+
+        <div class="icon-wrapper">
+          <a href="https://www.facebook.com/Kaycee.Rim" target="_blank">
+            <img src="./assets/img/facebook_icon.png" alt="Facebook" />
+          </a>
+        </div>
+
+        <div class="icon-wrapper2">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="./assets/img/instagram_icon.png" alt="Instagram" />
+          </a>
+        </div>
+
+        <div class="icon-wrapper3">
+          <a href="mailto:ckgrimando@gmail.com">
+            <img src="./assets/img/email_icon.jpg" alt="Email" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
