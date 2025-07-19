@@ -5,14 +5,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/Chi-Rimando06/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/chi.jpg" alt="Chi" width="170" height="170">
   </a>
   <h3 align="center">WD-Finals</h3>
 </div>
-<!-- TODO: Make a short description -->
+
 <div align="center">
-  Short Description. (Optional)
+  This project is a fully customized, Netflix-inspired personal website that showcases who I am, what I do, and what I’ve built. It serves as my digital identity and portfolio as a BSIT student focused on web design and development. The website consists of multiple interactive pages with custom styles, animations, and components that reflect my personality, interests, and work.
 </div>
 
 <br />
@@ -53,25 +52,19 @@
 
 ## Overview
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
-
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+This project is a fully customized, Netflix-inspired personal website that showcases who I am, what I do, and what I’ve built. It serves as my digital identity and portfolio as a BSIT student focused on web design and development. The website consists of multiple interactive pages with custom styles, animations, and components that reflect my personality, interests, and work.This project is a fully customized, Netflix-inspired personal website that showcases who I am, what I do, and what I’ve built. It serves as my digital identity and portfolio as a BSIT student focused on web design and development. The website consists of multiple interactive pages with custom styles, animations, and components that reflect my personality, interests, and work.
 
 ### Key Components
-<!-- TODO: List of Key Components -->
-<!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- MultiPage Website
+- Netflix-Inspired Landing Page
+- Custom Hover & Animation Effects
+- Interactive Carousel and Cards
+- Fixed Header and Footer
+- Styled Project Gallery with Live Previews
+- Social Links & Contact Section
+- Cinematic Intro Animations
 
 ### Technology
-<!-- TODO: List of Technology Used -->
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
@@ -112,7 +105,9 @@ WD-ProjectName
 
 ## Resources
 
-<!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Netflix | Served as the primary design inspiration for the layout, animations, and overall interface of the landing page. | https://www.netflix.com/ph |
+| Google Fonts | Used to style the website with custom typography to reflect a modern and readable aesthetic. | https://fonts.google.com/ |
+| Canva | Used in designing and exporting my curriculum vitae. | https://www.canva.com |
+| Capcut | Used to edit and compile my landing page intro video and project highlight videos. | https://www.capcut.com/ |
