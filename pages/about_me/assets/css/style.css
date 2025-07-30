@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    visibility: hidden;
+}
+
 body.hide-scrollbar {
     overflow: hidden;
 }
