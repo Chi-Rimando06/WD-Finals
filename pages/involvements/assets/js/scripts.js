@@ -2,12 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("involvements-intro-overlay");
 
     fetch("/WD-Finals/components/header.html")
-        .then((res) => res.text())
+        .then((response) => response.text())
         .then((data) => {
-        const header = document.getElementById("header-placeholder");
-        if (header) header.innerHTML = data;
+            const placeholder = document.getElementById("header-placeholder");
+            if (placeholder) {
+                placeholder.innerHTML = data;
+
+                document.querySelectorAll(".nav-bar nav a").forEach((link) => {
+                    link.addEventListener("click", (e) => {
+                        const name = e.target.textContent.trim();
+                        console.log(`Navigated to ${name}`);
+                    });
+                });
+            }
+            document.body.style.visibility = "visible";
         })
-        .catch((err) => console.error("Header load error:", err));
+        .catch((error) => {
+            console.error("Header failed to load:", error);
+            document.body.style.visibility = "visible";
+        });
 
     if (overlay) {
         setTimeout(() => {
