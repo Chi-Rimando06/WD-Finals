@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("skills-intro-overlay");
 
-    fetch("../../../../components/header.html")
+    fetch("/WD-Finals/components/header.html")
         .then((res) => res.text())
         .then((data) => {
         const header = document.getElementById("header-placeholder");

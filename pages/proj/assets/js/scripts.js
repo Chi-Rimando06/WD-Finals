@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../../../../components/header.html")
+    fetch("/WD-Finals/components/header.html")
         .then((response) => response.text())
         .then((data) => {
         const placeholder = document.getElementById("header-placeholder");
